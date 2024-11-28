@@ -1,0 +1,371 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    padding: 15px;
+}
+
+/* Encabezado */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.titulo {
+    flex-grow: 1;
+}
+
+.titulo h4 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.logo img {
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Secciones de datos */
+.Datos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.datos-vehiculo, .datos-cliente {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Formularios */
+.campo {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    color: #263238;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input[type="checkbox"] {
+    margin-right: 4px;
+    margin-left: 8px;
+}
+
+/* Tabla de presupuesto */
+.presupuesto {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
+.tabla-presupuesto {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabla-presupuesto th {
+    background-color: #1e88e5;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.tabla-presupuesto td {
+    padding: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-presupuesto input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.tabla-presupuesto tfoot {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.total-texto {
+    text-align: right;
+    padding-right: 15px;
+    color: #1e88e5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .Datos {
+        grid-template-columns: 1fr;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+    }
+    
+    .titulo h4 {
+        text-align: center;
+        margin-top: 8px;
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        max-width: 150px;
+        height: auto;
+    }
+
+    .presupuesto {
+        padding: 12px;
+    }
+
+    .tabla-presupuesto th,
+    .tabla-presupuesto td {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+
+/* Breakpoint para pantallas pequeñas */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"] {
+        padding: 6px;
+        font-size: 13px;
+    }
+
+    .tabla-presupuesto {
+        font-size: 13px;
+    }
+}
+
+/* Efectos hover */
+input:hover {
+    border-color: #3498db;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(52,152,219,0.3);
+}
+
+.tabla-presupuesto tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Sección de Observaciones */
+.observaciones {
+    background-color: white;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.observaciones textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Sección de Inventario */
+.inventario {
+    background-color: white;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.inventario-container {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.items-inventario {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.item:hover {
+    background-color: #f5f5f5;
+}
+
+/* Medidor de Gasolina */
+.medidor-gasolina {
+    width: 300px;
+    padding: 12px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.medidor-gasolina input[type="range"] {
+    width: 100%;
+    margin: 12px 0;
+    accent-color: #1e88e5;
+}
+
+.marcadores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+    text-align: center;
+    color: #263238;
+    margin-top: 8px;
+}
+
+/* Registro de Daños */
+.registro-danos {
+    margin-top: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.vistas-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.vista {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.vista:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.imagen-auto {
+    position: relative;
+    margin: 12px 0;
+}
+
+.imagen-auto img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.imagen-auto canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imagen-auto textarea {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.imagen-auto {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos responsivos adicionales */
+@media (max-width: 768px) {
+    .vistas-auto {
+        grid-template-columns: 1fr;
+    }
+    
+    .items-inventario {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tabla-presupuesto {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RSM Automotriz</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./imagenes/Logo RSM.png" alt="Logo RSM" width="150px">
+        </div>
+        <div class="titulo">
+            <h4 class="title">
+                Desabolladora y Pintura<br>
+                Mecánica en general
+            </h4>
+        </div>
+    </header>
+
+    <div class="Datos">
+        <section class="datos-vehiculo">
+            <h4>DATOS DEL VEHICULO</h4>
+            <form class="formulario-vehiculo">
+                <div class="campo">
+                    <label for="marca">Marca:</label>
+                    <input type="text" id="marca" name="marca" required>
+                </div>
+                
+                <div class="campo">
+                    <label for="modelo">Modelo:</label>
+                    <input type="text" id="modelo" name="modelo" required>
+                </div>
+    
+                <div class="campo">
+                    <label for="kilometraje">Kilometraje:</label>
+                    <input type="number" id="kilometraje" name="kilometraje" required>
+                </div>
+    
+                <div class="campo">
+                    <label for="serie">Número de Serie:</label>
+                    <input type="text" id="serie" name="serie" required>
+                </div>
+    
+                <div class="campo">
+                    <label for="color">Color:</label>
+                    <input type="text" id="color" name="color" required>
+                </div>
+    
+                <div class="campo">
+                    <label for="placas">Placas:</label>
+                    <input type="text" id="placas" name="placas" required>
+                </div>
+    
+                <div class="campo">
+                    <label for="siem">S.I.E.M:</label>
+                    <input type="text" id="siem" name="siem" required>
+                </div>
+    
+                <div class="campo">
+                    <label for="Grúa">Ingresó en grúa:</label>
+                    Si<input type="checkbox" name="si" id="grua-si">
+                    No<input type="checkbox" name="no" id="grua-no">
+                </div>
+            </form>
+        </section>
+    
+        <section class="datos-cliente">
+            <h4>DATOS DEL CLIENTE</h4>
+            <form class="formulario-cliente">
+                <div class="campo">
+                    <label for="ingreso">Ingreso:</label>
+                    <input type="text" id="ingreso" name="ingreso" required>
+                </div>
+    
+                <div class="campo">
+                    <label for="salida">Salida:</label>
+                    <input type="text" id="salida" name="salida" required>
+                </div>
+    
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+    
+                    <label for="telefono">Teléfono</label>
+                    <input type="number" name="numero" id="numero" required>
+    
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    </div>
+
+    <section class="presupuesto">
+        <table class="tabla-presupuesto">
+            <thead>
+                <tr>
+                    <th>Cant.</th>
+                    <th>Descripción del trabajo</th>
+                    <th>Costo</th>
+                    <th>Importe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" name="cantidad1"></td>
+                    <td><input type="text" name="descripcion1"></td>
+                    <td><input type="number" name="costo1"></td>
+                    <td><input type="number" name="importe1" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="cantidad2"></td>
+                    <td><input type="text" name="descripcion2"></td>
+                    <td><input type="number" name="costo2"></td>
+                    <td><input type="number" name="importe2" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="cantidad3"></td>
+                    <td><input type="text" name="descripcion3"></td>
+                    <td><input type="number" name="costo3"></td>
+                    <td><input type="number" name="importe3" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="cantidad4"></td>
+                    <td><input type="text" name="descripcion4"></td>
+                    <td><input type="number" name="costo4"></td>
+                    <td><input type="number" name="importe4" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="cantidad5"></td>
+                    <td><input type="text" name="descripcion5"></td>
+                    <td><input type="number" name="costo5"></td>
+                    <td><input type="number" name="importe5" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="cantidad6"></td>
+                    <td><input type="text" name="descripcion6"></td>
+                    <td><input type="number" name="costo6"></td>
+                    <td><input type="number" name="importe6" readonly></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="total-texto">Total:</td>
+                    <td><input type="number" name="total" readonly></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+
+    <!-- Sección de Observaciones -->
+    <section class="observaciones">
+        <h4>Observaciones</h4>
+        <textarea name="observaciones" rows="4" placeholder="Ingrese aquí cualquier observación adicional"></textarea>
+    </section>
+
+    <!-- Sección de Inventario -->
+    <section class="inventario">
+        <h4>Inventario del Vehículo</h4>
+        <div class="inventario-container">
+            <div class="items-inventario">
+                <div class="item">
+                    <input type="checkbox" id="espejos" name="espejos">
+                    <label for="espejos">Espejos</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="faroDelantero" name="faroDelantero">
+                    <label for="faroDelantero">Faro Delantero</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="direccionales" name="direccionales">
+                    <label for="direccionales">Direccionales</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="taponGasolina" name="taponGasolina">
+                    <label for="taponGasolina">Tapón de Gasolina</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="asientos" name="asientos">
+                    <label for="asientos">Asientos</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="luzStop" name="luzStop">
+                    <label for="luzStop">Luz de Stop Trasero</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="tacometros" name="tacometros">
+                    <label for="tacometros">Tacómetros</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="filtroAire" name="filtroAire">
+                    <label for="filtroAire">Filtro de Aire</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="bateria" name="bateria">
+                    <label for="bateria">Batería</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="llaves" name="llaves">
+                    <label for="llaves">Llaves</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="pedales" name="pedales">
+                    <label for="pedales">Pedales</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="claxon" name="claxon">
+                    <label for="claxon">Bocina</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="estereo" name="estereo">
+                    <label for="estereo">Estéreo</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="parabrisas" name="parabrisas">
+                    <label for="parabrisas">Parabrisas</label>
+                </div>
+            </div>
+
+            <!-- Imagen de Gasolina -->
+            <div class="medidor-gasolina">
+                <img src="./imagenes/marco-gasolina.png" alt="Medidor de gasolina" style="width: 300px; height: auto;">
+            </div>
+        </div>
+    </section>
+
+        <!-- Registro de Daños -->
+        <div class="registro-danos">
+            <h4>Registro de Daños Previos</h4>
+            <div class="vistas-auto">
+                <div class="vista">
+                    <h5>Vista Frontal</h5>
+                    <div class="imagen-auto frontal">
+                        <img src="./imagenes/auto-frontal.png" alt="Vista frontal">
+                        <canvas id="canvasFrontal"></canvas>
+                        <textarea rows="2"></textarea>
+                    </div>
+                </div>
+                <div class="vista">
+                    <h5>Vista Trasera</h5>
+                    <div class="imagen-auto trasera">
+                        <img src="./imagenes/auto-trasero.png" alt="Vista trasera">
+                        <canvas id="canvasTrasero"></canvas>
+                        <textarea rows="2"></textarea>
+                    </div>
+                </div>
+                <div class="vista">
+                    <h5>Lado Izquierdo</h5>
+                    <div class="imagen-auto izquierdo">
+                        <img src="./imagenes/auto-izquierdo.png" alt="Lado izquierdo">
+                        <canvas id="canvasIzquierdo"></canvas>
+                        <textarea rows="2"></textarea>
+                    </div>
+                </div>
+                <div class="vista">
+                    <h5>Lado Derecho</h5>
+                    <div class="imagen-auto derecho">
+                        <img src="./imagenes/auto-derecho.png" alt="Lado derecho">
+                        <canvas id="canvasDerecho"></canvas>
+                        <textarea rows="2"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
